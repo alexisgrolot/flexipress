@@ -1,0 +1,122 @@
+/* styles.css */
+
+/* General style */
+#flexipress-plugin .wrap {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* "Flexipress Settings" title style */
+#flexipress-plugin h2 {
+  margin-bottom: 20px; /* Adds a lower margin to the title */
+}
+
+/* Tabs */
+#flexipress-plugin .nav-tab-wrapper {
+  background-color: #01ADFF;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+#flexipress-plugin .nav-tab {
+  color: #fff;
+  background-color: #01ADFF;
+  border: none;
+  border-radius: 5px;
+}
+
+#flexipress-plugin .nav-tab:hover {
+  background-color: #0087C1;
+}
+
+/* Tab contents */
+.tab-content {
+  margin-top: 20px;
+}
+
+/* Toggle switch style */
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-right: 10px; /* Adjusts the margin between the toggle switch and the details */
+}
+ .switch input {
+  position: absolute;
+  opacity: 0;
+  top: -30px;
+  top: -30px;
+  width: 0;
+  height: 0;
+}
+ .switch input + span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+ .switch input + span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  bottom: 4px;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all .5s;
+}
+ .switch input:checked + span {
+  background-color: #2196F3;
+}
+ .switch input:checked + span:before {
+  left: 30px;
+}
+.feature-toggle-pair {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.feature-details {
+  flex-grow: 1;
+}
+
+/* Adjust space between title and description */
+.feature-details p {
+  margin-top: -20px; /* Adjust margins to reduce space */
+}
+
+/* "Save Changes" button style */
+button[name="save_changes"] {
+background-color: #01ADFF;
+color: #fff;
+padding: 12px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+
+button[name="save_changes"]:hover {
+background-color: #0087C1;
+}

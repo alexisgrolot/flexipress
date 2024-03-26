@@ -1,0 +1,69 @@
+<?php
+// File name: admin/wordpress-admin-settings.php
+
+// Include feature files
+require_once(plugin_dir_path(__FILE__) . '/../includes/remove-wordpress-version-number/remove-wordpress-version-number.php');
+require_once(plugin_dir_path(__FILE__) . '/../includes/disable-gutenberg-editor/disable-gutenberg-editor.php');
+require_once(plugin_dir_path(__FILE__) . '/../includes/disable-the-wp-admin-bar/disable-the-wp-admin-bar.php');
+
+// Checks if features are enabled
+$removewordpressversionnumber_enabled = get_option('wordpress-admin_enabled_removewordpressversionnumber', false);
+$disablegutenbergeditor_enabled = get_option('wordpress-admin_enabled_disablegutenbergeditor', false);
+$disablethewpadminbar_enabled = get_option('wordpress-admin_enabled_disablethewpadminbar', false);
+
+// Form processing during submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
+    $removewordpressversionnumber_enabled = isset($_POST['removewordpressversionnumber_enabled']) && $_POST['removewordpressversionnumber_enabled'] === 'on';
+    $disablegutenbergeditor_enabled = isset($_POST['disablegutenbergeditor_enabled']) && $_POST['disablegutenbergeditor_enabled'] === 'on';
+    $disablethewpadminbar_enabled = isset($_POST['disablethewpadminbar_enabled']) && $_POST['disablethewpadminbar_enabled'] === 'on';
+
+    // Records toggle switch status
+    update_option('wordpress-admin_enabled_removewordpressversionnumber', $removewordpressversionnumber_enabled);
+    update_option('wordpress-admin_enabled_disablegutenbergeditor', $disablegutenbergeditor_enabled);
+    update_option('wordpress-admin_enabled_disablethewpadminbar', $disablethewpadminbar_enabled);
+}
+
+
+// Displays the form and switch toggles
+?>
+<div class="wrap" id="flexipress-plugin">
+    <h2><?php _e('WordPress Admin Settings', 'flexipress'); ?></h2>
+
+    <form method="post" action="">
+        <?php
+        // Features and their status
+        $features = array(
+            'removewordpressversionnumber' => __('Remove WordPress Version Number', 'flexipress'),
+            'disablegutenbergeditor' => __('Disable Gutenberg Editor (use Classic Editor)', 'flexipress'),
+            'disablethewpadminbar' => __('Disable The WP Admin Bar', 'flexipress'),
+            // Add other features as needed
+        );
+
+        foreach ($features as $key => $label) :
+            $enabled = get_option("wordpress-admin_enabled_$key", false);
+        ?>
+            <div class="feature-toggle-pair">
+                <label class="switch">
+                    <input type="checkbox" name="<?php echo $key; ?>_enabled" <?php checked($enabled); ?>>
+                    <span class="toggle-slider round"></span>
+                </label>
+                
+                <div class="feature-details">
+                    <h3><?php echo $label; ?></h3>
+                    <?php if ($key === 'removewordpressversionnumber'): ?>
+                        <p><?php _e('Hide the WordPress version number from your site\'s frontend and feeds.', 'flexipress'); ?></p> <!-- Function description -->
+                    <?php elseif ($key === 'disablegutenbergeditor'): ?>
+                        <p><?php _e('Switch back to the Classic Editor by disablling the Block Editor.', 'flexipress'); ?></p> <!-- Function description -->
+                    <?php elseif ($key === 'disablethewpadminbar'): ?>
+                        <p><?php _e('Hide the WordPress Admin Bar for all users in the frontend.', 'flexipress'); ?></p> <!-- Function description -->
+                    <?php else: ?>
+                        <p>.</p> <!-- Default description -->
+                    <?php endif; ?>
+                </div>
+
+            </div>
+        <?php endforeach; ?>
+
+        <button type="submit" name="save_changes"><?php _e('Save Changes', 'flexipress'); ?></button>
+    </form>
+</div>
