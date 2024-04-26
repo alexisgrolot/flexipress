@@ -10,7 +10,7 @@ function flexipress_admin_menu() {
 function flexipress_admin_page() {
     ?>
     <div class="wrap" id="flexipress-plugin">
-        <h2><?php _e('FlexiPress Settings', 'flexipress'); ?></h2>
+        <h2><?php esc_html_e('FlexiPress Settings', 'flexipress'); ?></h2>
 
         <!-- Administration page content with tabs -->
         <?php
@@ -19,14 +19,14 @@ function flexipress_admin_page() {
         ?>
 
         <h2 class="nav-tab-wrapper">
-            <a href="?page=flexipress&tab=general" class="nav-tab <?php echo $active_tab === 'general' ? 'nav-tab-active' : ''; ?>"><?php _e('General', 'flexipress'); ?></a>
-            <a href="?page=flexipress&tab=performance" class="nav-tab <?php echo $active_tab === 'performance' ? 'nav-tab-active' : ''; ?>"><?php _e('Performance', 'flexipress'); ?></a>
-            <a href="?page=flexipress&tab=styling" class="nav-tab <?php echo $active_tab === 'styling' ? 'nav-tab-active' : ''; ?>"><?php _e('Styling', 'flexipress'); ?></a>
-            <a href="?page=flexipress&tab=animation" class="nav-tab <?php echo $active_tab === 'animation' ? 'nav-tab-active' : ''; ?>"><?php _e('Animation', 'flexipress'); ?></a>
-            <a href="?page=flexipress&tab=security" class="nav-tab <?php echo $active_tab === 'security' ? 'nav-tab-active' : ''; ?>"><?php _e('Security', 'flexipress'); ?></a>  
-            <a href="?page=flexipress&tab=wordpress-admin" class="nav-tab <?php echo $active_tab === 'wordpress-admin' ? 'nav-tab-active' : ''; ?>"><?php _e('WordPress Admin', 'flexipress'); ?></a>
-            <a href="?page=flexipress&tab=javascript" class="nav-tab <?php echo $active_tab === 'javascript' ? 'nav-tab-active' : ''; ?>"><?php _e('Javascript', 'flexipress'); ?></a>
-            <a href="?page=flexipress&tab=tracking-analytics" class="nav-tab <?php echo $active_tab === 'tracking-analytics' ? 'nav-tab-active' : ''; ?>"><?php _e('Tracking and Analytics', 'flexipress'); ?></a>
+            <a href="?page=flexipress&tab=general" class="nav-tab <?php echo $active_tab === 'general' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('General', 'flexipress'); ?></a>
+            <a href="?page=flexipress&tab=performance" class="nav-tab <?php echo $active_tab === 'performance' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Performance', 'flexipress'); ?></a>
+            <a href="?page=flexipress&tab=styling" class="nav-tab <?php echo $active_tab === 'styling' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Styling', 'flexipress'); ?></a>
+            <a href="?page=flexipress&tab=animation" class="nav-tab <?php echo $active_tab === 'animation' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Animation', 'flexipress'); ?></a>
+            <a href="?page=flexipress&tab=security" class="nav-tab <?php echo $active_tab === 'security' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Security', 'flexipress'); ?></a>  
+            <a href="?page=flexipress&tab=wordpress-admin" class="nav-tab <?php echo $active_tab === 'wordpress-admin' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('WordPress Admin', 'flexipress'); ?></a>
+            <a href="?page=flexipress&tab=javascript" class="nav-tab <?php echo $active_tab === 'javascript' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Javascript', 'flexipress'); ?></a>
+            <a href="?page=flexipress&tab=tracking-analytics" class="nav-tab <?php echo $active_tab === 'tracking-analytics' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Tracking and Analytics', 'flexipress'); ?></a>
         </h2>
 
         <div class="tab-content">

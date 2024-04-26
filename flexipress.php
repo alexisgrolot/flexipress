@@ -23,7 +23,7 @@ function flexipress_activate() {
     
     // Checks if the WordPress version is compatible
     if (version_compare(get_bloginfo('version'), '5.0', '<')) {
-        wp_die(__('FlexiPress requires at least WordPress 5.0. Please update your installation.', 'flexipress'));
+        wp_die(esc_html__('FlexiPress requires at least WordPress 5.0. Please update your installation.', 'flexipress'));
     }
     
     // Creates an option to store default settings

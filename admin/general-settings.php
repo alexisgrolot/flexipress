@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
 // Displays the form and switch toggles
 ?>
 <div class="wrap" id="flexipress-plugin">
-    <h2><?php _e('General Settings', 'flexipress'); ?></h2>
+    <h2><?php esc_html_e('General Settings', 'flexipress'); ?></h2>
 
     <form method="post" action="">
         <?php
@@ -44,18 +44,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
         ?>
             <div class="feature-toggle-pair">
                 <label class="switch">
-                    <input type="checkbox" name="<?php echo $key; ?>_enabled" <?php checked($enabled); ?>>
+                    <input type="checkbox" name="<?php echo esc_js( $key ); ?>_enabled" <?php checked($enabled); ?>>
                     <span class="toggle-slider round"></span>
                 </label>
                 
                 <div class="feature-details">
-                    <h3><?php echo $label; ?></h3>
+                    <h3><?php echo esc_html( $label ); ?></h3>
                     <?php if ($key === 'disableautomaticupdatesemails'): ?>
-                        <p><?php _e('Stop getting emails about automatic updates on your WordPress site.', 'flexipress'); ?></p> <!-- Function description -->
+                        <p><?php esc_html_e('Stop getting emails about automatic updates on your WordPress site.', 'flexipress'); ?></p> <!-- Function description -->
                     <?php elseif ($key === 'disableattachmentpages'): ?>
-                        <p><?php _e('Hide the Attachment/Attachments pages on the frontend from all visitors.', 'flexipress'); ?></p> <!-- Function description -->
+                        <p><?php esc_html_e('Hide the Attachment/Attachments pages on the frontend from all visitors.', 'flexipress'); ?></p> <!-- Function description -->
                     <?php elseif ($key === 'completelydisablecomments'): ?>
-                        <p><?php _e('Disable comments for all post types, in the admin and the frontend.', 'flexipress'); ?></p> <!-- Function description -->
+                        <p><?php esc_html_e('Disable comments for all post types, in the admin and the frontend.', 'flexipress'); ?></p> <!-- Function description -->
                     <?php else: ?>
                         <p>.</p> <!-- Default description -->
                     <?php endif; ?>
@@ -64,6 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
             </div>
         <?php endforeach; ?>
 
-        <button type="submit" name="save_changes"><?php _e('Save Changes', 'flexipress'); ?></button>
+        <button type="submit" name="save_changes"><?php esc_html_e('Save Changes', 'flexipress'); ?></button>
     </form>
 </div>

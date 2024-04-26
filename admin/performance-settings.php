@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
 // Displays the form and switch toggles
 ?>
 <div class="wrap" id="flexipress-plugin">
-    <h2><?php _e('Performance Settings', 'flexipress'); ?></h2>
+    <h2><?php esc_html_e('Performance Settings', 'flexipress'); ?></h2>
 
     <form method="post" action="">
         <?php
@@ -34,14 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
         ?>
             <div class="feature-toggle-pair">
                 <label class="switch">
-                    <input type="checkbox" name="<?php echo $key; ?>_enabled" <?php checked($enabled); ?>>
+                    <input type="checkbox" name="<?php echo esc_js( $key ); ?>_enabled" <?php checked($enabled); ?>>
                     <span class="toggle-slider round"></span>
                 </label>
                 
                 <div class="feature-details">
-                    <h3><?php echo $label; ?></h3>
+                    <h3><?php echo esc_html( $label ); ?></h3>
                     <?php if ($key === 'allowsvgfilesupload'): ?>
-                        <p><?php _e('Add support for SVG files to be uploaded in WordPress media.', 'flexipress'); ?></p> <!-- Function description -->
+                        <p><?php esc_html_e('Add support for SVG files to be uploaded in WordPress media.', 'flexipress'); ?></p> <!-- Function description -->
                     <?php else: ?>
                         <p>.</p> <!-- Default description -->
                     <?php endif; ?>
@@ -50,6 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
             </div>
         <?php endforeach; ?>
 
-        <button type="submit" name="save_changes"><?php _e('Save Changes', 'flexipress'); ?></button>
+        <button type="submit" name="save_changes"><?php esc_html_e('Save Changes', 'flexipress'); ?></button>
     </form>
 </div>

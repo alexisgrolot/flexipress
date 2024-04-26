@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
 // Displays the form and switch toggles
 ?>
 <div class="wrap" id="flexipress-plugin">
-    <h2><?php _e('Security Settings', 'flexipress'); ?></h2>
+    <h2><?php esc_html_e('Security Settings', 'flexipress'); ?></h2>
 
     <form method="post" action="">
         <?php
@@ -39,16 +39,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
         ?>
             <div class="feature-toggle-pair">
                 <label class="switch">
-                    <input type="checkbox" name="<?php echo $key; ?>_enabled" <?php checked($enabled); ?>>
+                    <input type="checkbox" name="<?php echo esc_js( $key ); ?>_enabled" <?php checked($enabled); ?>>
                     <span class="toggle-slider round"></span>
                 </label>
                 
                 <div class="feature-details">
-                    <h3><?php echo $label; ?></h3>
+                    <h3><?php echo esc_html( $label ); ?></h3>
                     <?php if ($key === 'disablexmlrpc'): ?>
-                        <p><?php _e('On sites running WordPress 3.5+, disable XML-RPC completely.', 'flexipress'); ?></p> <!-- Function description -->
+                        <p><?php esc_html_e('On sites running WordPress 3.5+, disable XML-RPC completely.', 'flexipress'); ?></p> <!-- Function description -->
                     <?php elseif ($key === 'disablewordpressrestapi'): ?>
-                        <p><?php _e('Easily disable the WP REST API on your website.', 'flexipress'); ?></p> <!-- Function description -->
+                        <p><?php esc_html_e('Easily disable the WP REST API on your website.', 'flexipress'); ?></p> <!-- Function description -->
                     <?php else: ?>
                         <p>.</p> <!-- Default description -->
                     <?php endif; ?>
@@ -57,6 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
             </div>
         <?php endforeach; ?>
 
-        <button type="submit" name="save_changes"><?php _e('Save Changes', 'flexipress'); ?></button>
+        <button type="submit" name="save_changes"><?php esc_html_e('Save Changes', 'flexipress'); ?></button>
     </form>
 </div>
