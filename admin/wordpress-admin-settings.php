@@ -1,5 +1,6 @@
 <?php
 // File name: admin/wordpress-admin-settings.php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Include feature files
 require_once(plugin_dir_path(__FILE__) . '/../includes/remove-wordpress-version-number/remove-wordpress-version-number.php');

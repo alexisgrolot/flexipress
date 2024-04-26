@@ -1,5 +1,6 @@
 <?php
 // File: admin/security-settings.php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Include feature files
 require_once(plugin_dir_path(__FILE__) . '/../includes/disable-xml-rpc/disable-xml-rpc.php');
@@ -7,7 +8,7 @@ require_once(plugin_dir_path(__FILE__) . '/../includes/disable-wordpress-rest-ap
 
 // Checks if features are enabled
 $disablexmlrpc_enabled = get_option('flexipress_security_enabled_disablexmlrpc', false);
-$disablewordpressrestapi_enabled = get_option('flexipress_security_enabled_disablewordpressrestapi', false);
+$disablewordpressrestapi_enabled = get_option('flexipresssecurity_enabled_disablewordpressrestapi', false);
 
 // Form processing during submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {

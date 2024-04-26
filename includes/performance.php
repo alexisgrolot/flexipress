@@ -1,5 +1,6 @@
 <?php
 // File: includes/performance.php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Include specific performance features
 require_once(plugin_dir_path(__FILE__) . 'allow-svg-files-upload/allow-svg-files-upload.php');

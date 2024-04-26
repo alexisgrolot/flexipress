@@ -1,5 +1,6 @@
 <?php
 // File : admin/general-settings.php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Include feature files
 require_once(plugin_dir_path(__FILE__) . '/../includes/disable-automatic-updates-emails/disable-automatic-updates-emails.php');

@@ -1,5 +1,6 @@
 <?php
 // File: includes/security.php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Include specific security features
 require_once(plugin_dir_path(__FILE__) . 'disable-xml-rpc/disable-xml-rpc.php');

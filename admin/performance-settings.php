@@ -1,5 +1,6 @@
 <?php
 // File : admin/performance-settings.php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Include feature files
 require_once(plugin_dir_path(__FILE__) . '/../includes/allow-svg-files-upload/allow-svg-files-upload.php');

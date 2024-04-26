@@ -13,6 +13,8 @@
  * License: GPLv2 or later
  */
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 // Activating and deactivating the plugin
 register_activation_hook(__FILE__, 'flexipress_activate');
 register_deactivation_hook(__FILE__, 'flexipress_deactivate');
