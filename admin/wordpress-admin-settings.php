@@ -7,9 +7,9 @@ require_once(plugin_dir_path(__FILE__) . '/../includes/disable-gutenberg-editor/
 require_once(plugin_dir_path(__FILE__) . '/../includes/disable-the-wp-admin-bar/disable-the-wp-admin-bar.php');
 
 // Checks if features are enabled
-$removewordpressversionnumber_enabled = get_option('wordpress-admin_enabled_removewordpressversionnumber', false);
-$disablegutenbergeditor_enabled = get_option('wordpress-admin_enabled_disablegutenbergeditor', false);
-$disablethewpadminbar_enabled = get_option('wordpress-admin_enabled_disablethewpadminbar', false);
+$removewordpressversionnumber_enabled = get_option('flexipress_wordpress-admin_enabled_removewordpressversionnumber', false);
+$disablegutenbergeditor_enabled = get_option('flexipress_wordpress-admin_enabled_disablegutenbergeditor', false);
+$disablethewpadminbar_enabled = get_option('flexipress_wordpress-admin_enabled_disablethewpadminbar', false);
 
 // Form processing during submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
@@ -18,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
     $disablethewpadminbar_enabled = isset($_POST['disablethewpadminbar_enabled']) && $_POST['disablethewpadminbar_enabled'] === 'on';
 
     // Records toggle switch status
-    update_option('wordpress-admin_enabled_removewordpressversionnumber', $removewordpressversionnumber_enabled);
-    update_option('wordpress-admin_enabled_disablegutenbergeditor', $disablegutenbergeditor_enabled);
-    update_option('wordpress-admin_enabled_disablethewpadminbar', $disablethewpadminbar_enabled);
+    update_option('flexipress_wordpress-admin_enabled_removewordpressversionnumber', $removewordpressversionnumber_enabled);
+    update_option('flexipress_wordpress-admin_enabled_disablegutenbergeditor', $disablegutenbergeditor_enabled);
+    update_option('flexipress_wordpress-admin_enabled_disablethewpadminbar', $disablethewpadminbar_enabled);
 }
 
 

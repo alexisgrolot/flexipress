@@ -5,14 +5,14 @@
 require_once(plugin_dir_path(__FILE__) . '/../includes/allow-svg-files-upload/allow-svg-files-upload.php');
 
 // Checks if features are enabled
-$allowsvgfilesupload_enabled = get_option('performance_enabled_allowsvgfilesupload', false);
+$allowsvgfilesupload_enabled = get_option('flexipress_performance_enabled_allowsvgfilesupload', false);
 
 // Form processing during submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
     $allowsvgfilesupload_enabled = isset($_POST['allowsvgfilesupload_enabled']) && $_POST['allowsvgfilesupload_enabled'] === 'on';
 
     // Records toggle switch status
-    update_option('performance_enabled_allowsvgfilesupload', $allowsvgfilesupload_enabled);
+    update_option('flexipress_performance_enabled_allowsvgfilesupload', $allowsvgfilesupload_enabled);
 }
 
 

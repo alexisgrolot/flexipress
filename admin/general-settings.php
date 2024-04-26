@@ -7,9 +7,9 @@ require_once(plugin_dir_path(__FILE__) . '/../includes/disable-attachment-pages/
 require_once(plugin_dir_path(__FILE__) . '/../includes/completely-disable-comments/completely-disable-comments.php');
 
 // Checks if features are enabled
-$disableautomaticupdatesemails_enabled = get_option('general_enabled_disableautomaticupdatesemails', false);
-$disableattachmentpages_enabled = get_option('general_enabled_disableattachmentpages', false);
-$completelydisablecomments_enabled = get_option('general_enabled_completelydisablecomments', false);
+$disableautomaticupdatesemails_enabled = get_option('flexipress_general_enabled_disableautomaticupdatesemails', false);
+$disableattachmentpages_enabled = get_option('flexipress_general_enabled_disableattachmentpages', false);
+$completelydisablecomments_enabled = get_option('flexipress_general_enabled_completelydisablecomments', false);
 
 // Form processing during submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
@@ -18,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
     $completelydisablecomments_enabled = isset($_POST['completelydisablecomments_enabled']) && $_POST['completelydisablecomments_enabled'] === 'on';
 
     // Records toggle switch status
-    update_option('general_enabled_disableautomaticupdatesemails', $disableautomaticupdatesemails_enabled);
-    update_option('general_enabled_disableattachmentpages', $disableattachmentpages_enabled);
-    update_option('general_enabled_completelydisablecomments', $completelydisablecomments_enabled);
+    update_option('flexipress_general_enabled_disableautomaticupdatesemails', $disableautomaticupdatesemails_enabled);
+    update_option('flexipress_general_enabled_disableattachmentpages', $disableattachmentpages_enabled);
+    update_option('flexipress_general_enabled_completelydisablecomments', $completelydisablecomments_enabled);
 }
 
 

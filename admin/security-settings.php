@@ -6,8 +6,8 @@ require_once(plugin_dir_path(__FILE__) . '/../includes/disable-xml-rpc/disable-x
 require_once(plugin_dir_path(__FILE__) . '/../includes/disable-wordpress-rest-api/disable-wordpress-rest-api.php');
 
 // Checks if features are enabled
-$disablexmlrpc_enabled = get_option('security_enabled_disablexmlrpc', false);
-$disablewordpressrestapi_enabled = get_option('security_enabled_disablewordpressrestapi', false);
+$disablexmlrpc_enabled = get_option('flexipress_security_enabled_disablexmlrpc', false);
+$disablewordpressrestapi_enabled = get_option('flexipress_security_enabled_disablewordpressrestapi', false);
 
 // Form processing during submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
@@ -15,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
     $disablewordpressrestapi_enabled = isset($_POST['disablewordpressrestapi_enabled']) && $_POST['disablewordpressrestapi_enabled'] === 'on';
 
     // Records toggle switch status
-    update_option('security_enabled_disablexmlrpc', $disablexmlrpc_enabled);
-    update_option('security_enabled_disablewordpressrestapi', $disablewordpressrestapi_enabled);
+    update_option('flexipress_security_enabled_disablexmlrpc', $disablexmlrpc_enabled);
+    update_option('flexipress_security_enabled_disablewordpressrestapi', $disablewordpressrestapi_enabled);
 }
 
 
