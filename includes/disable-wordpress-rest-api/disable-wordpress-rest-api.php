@@ -5,7 +5,7 @@ function flexipress_security_disablewordpressrestapi() {
 	    function ( $access ) {
 		    return new WP_Error(
 			    'rest_disabled',
-			    __( 'The WordPress REST API has been disabled.' ),
+			    __( 'The WordPress REST API has been disabled.' , 'flexipress' ),
 			    array(
 				    'status' => rest_authorization_required_code(),
 			    )
