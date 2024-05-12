@@ -10,10 +10,17 @@ $allowsvgfilesupload_enabled = get_option('flexipress_performance_enabled_allows
 
 // Form processing during submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
-    $allowsvgfilesupload_enabled = isset($_POST['allowsvgfilesupload_enabled']) && $_POST['allowsvgfilesupload_enabled'] === 'on';
+    // Verify nonce
+    if ( !isset( $_POST['flexipress_settings_nonce'] ) || !wp_verify_nonce( $_POST['flexipress_settings_nonce'], 'flexipress_save_settings' ) ) {
+        // Nonce verification failed; do something like display an error message or redirect
+        // For example: wp_die( 'Security check failed' );
+    } else {
+        // Nonce verification succeeded; continue processing form data
+        $allowsvgfilesupload_enabled = isset($_POST['allowsvgfilesupload_enabled']) && $_POST['allowsvgfilesupload_enabled'] === 'on';
 
-    // Records toggle switch status
-    update_option('flexipress_performance_enabled_allowsvgfilesupload', $allowsvgfilesupload_enabled);
+        // Records toggle switch status
+        update_option('flexipress_performance_enabled_allowsvgfilesupload', $allowsvgfilesupload_enabled);
+    }
 }
 
 
@@ -24,6 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
 
     <form method="post" action="">
         <?php
+		// Ajoute un nonce au formulaire
+        wp_nonce_field( 'flexipress_save_settings', 'flexipress_settings_nonce' );
+		
         // Features and their status
         $features = array(
             'allowsvgfilesupload' => __('Allow SVG Files Upload', 'flexipress'),
@@ -31,11 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
         );
 
         foreach ($features as $key => $label) :
-            $enabled = get_option("performance_enabled_$key", false);
+            $enabled = get_option("flexipress_performance_enabled_$key", false);
         ?>
             <div class="feature-toggle-pair">
                 <label class="switch">
-                    <input type="checkbox" name="<?php echo esc_js( $key ); ?>_enabled" <?php checked($enabled); ?>>
+                    <input type="checkbox" name="<?php echo esc_attr( $key ); ?>_enabled" <?php checked($enabled); ?>>
                     <span class="toggle-slider round"></span>
                 </label>
                 

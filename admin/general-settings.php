@@ -14,14 +14,21 @@ $completelydisablecomments_enabled = get_option('flexipress_general_enabled_comp
 
 // Form processing during submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
-    $disableautomaticupdatesemails_enabled = isset($_POST['disableautomaticupdatesemails_enabled']) && $_POST['disableautomaticupdatesemails_enabled'] === 'on';
-    $disableattachmentpages_enabled = isset($_POST['disableattachmentpages_enabled']) && $_POST['disableattachmentpages_enabled'] === 'on';
-    $completelydisablecomments_enabled = isset($_POST['completelydisablecomments_enabled']) && $_POST['completelydisablecomments_enabled'] === 'on';
+    // Verify nonce
+    if ( !isset( $_POST['flexipress_settings_nonce'] ) || !wp_verify_nonce( $_POST['flexipress_settings_nonce'], 'flexipress_save_settings' ) ) {
+        // Nonce verification failed; do something like display an error message or redirect
+        // For example: wp_die( 'Security check failed' );
+    } else {
+        // Nonce verification succeeded; continue processing form data
+        $disableautomaticupdatesemails_enabled = isset($_POST['disableautomaticupdatesemails_enabled']) && $_POST['disableautomaticupdatesemails_enabled'] === 'on';
+        $disableattachmentpages_enabled = isset($_POST['disableattachmentpages_enabled']) && $_POST['disableattachmentpages_enabled'] === 'on';
+        $completelydisablecomments_enabled = isset($_POST['completelydisablecomments_enabled']) && $_POST['completelydisablecomments_enabled'] === 'on';
 
-    // Records toggle switch status
-    update_option('flexipress_general_enabled_disableautomaticupdatesemails', $disableautomaticupdatesemails_enabled);
-    update_option('flexipress_general_enabled_disableattachmentpages', $disableattachmentpages_enabled);
-    update_option('flexipress_general_enabled_completelydisablecomments', $completelydisablecomments_enabled);
+        // Records toggle switch status
+        update_option('flexipress_general_enabled_disableautomaticupdatesemails', $disableautomaticupdatesemails_enabled);
+        update_option('flexipress_general_enabled_disableattachmentpages', $disableattachmentpages_enabled);
+        update_option('flexipress_general_enabled_completelydisablecomments', $completelydisablecomments_enabled);
+    }
 }
 
 
@@ -32,20 +39,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
 
     <form method="post" action="">
         <?php
+        // Ajoute un nonce au formulaire
+        wp_nonce_field( 'flexipress_save_settings', 'flexipress_settings_nonce' );
+
         // Features and their status
         $features = array(
             'disableautomaticupdatesemails' => __('Disable Automatic Updates Emails', 'flexipress'),
             'disableattachmentpages' => __('Disable Attachment Pages', 'flexipress'),
             'completelydisablecomments' => __('Completely Disable Comments', 'flexipress'),
-            // Add other features as needed
+            // Ajoute d'autres fonctionnalités au besoin
         );
 
         foreach ($features as $key => $label) :
-            $enabled = get_option("general_enabled_$key", false);
+            $enabled = get_option("flexipress_general_enabled_$key", false);
         ?>
             <div class="feature-toggle-pair">
                 <label class="switch">
-                    <input type="checkbox" name="<?php echo esc_js( $key ); ?>_enabled" <?php checked($enabled); ?>>
+                    <input type="checkbox" name="<?php echo esc_attr( $key ); ?>_enabled" <?php checked($enabled); ?>>
                     <span class="toggle-slider round"></span>
                 </label>
                 
