@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FlexiPress 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/flexipress\n"
-"POT-Creation-Date: 2024-03-24T22:05:08+00:00\n"
-"PO-Revision-Date: 2024-03-25 00:06+0100\n"
+"POT-Creation-Date: 2024-05-12T12:40:15+00:00\n"
+"PO-Revision-Date: 2024-05-12 14:43+0200\n"
 "Last-Translator: \n"
 "Language-Team: WP Express alexis.wpexpress@gmail.com\n"
 "Language: fr_FR\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: C:\Users\MATI.HERVE\Downloads\flexipress\flexipress.php admin/admin.php:6
-#: flexipress.php:45
+#: flexipress.php:47
 msgid "FlexiPress"
 msgstr "FlexiPress"
 
@@ -48,7 +48,7 @@ msgstr "Alexis GROLOT (WP Express)"
 msgid "https://express-wp.com/en/about"
 msgstr "https://express-wp.com/a-propos"
 
-#: admin/admin.php:6 admin/admin.php:13 flexipress.php:44
+#: admin/admin.php:6 admin/admin.php:13 flexipress.php:46
 msgid "FlexiPress Settings"
 msgstr "Paramètres de FlexiPress"
 
@@ -84,124 +84,126 @@ msgstr "Javascript"
 msgid "Tracking and Analytics"
 msgstr "Suivi et analyse"
 
-#: admin/general-settings.php:34
+#: admin/general-settings.php:38
 msgid "General Settings"
 msgstr "Paramètres généraux"
 
-#: admin/general-settings.php:40
+#: admin/general-settings.php:47
 msgid "Disable Automatic Updates Emails"
 msgstr "Désactiver les courriels de mise à jour automatique"
 
-#: admin/general-settings.php:41
-msgid "Disable Automatic Updates"
-msgstr "Désactiver les mises à jour automatiques"
-
-#: admin/general-settings.php:42
+#: admin/general-settings.php:48
 msgid "Disable Attachment Pages"
 msgstr "Désactiver les pages de pièces jointes"
 
-#: admin/general-settings.php:43
+#: admin/general-settings.php:49
 msgid "Completely Disable Comments"
 msgstr "Désactiver complètement les commentaires"
 
-#: admin/general-settings.php:59
+#: admin/general-settings.php:65
 msgid "Stop getting emails about automatic updates on your WordPress site."
 msgstr ""
 "Ne recevez plus d'e-mails concernant les mises à jour automatiques de votre "
 "site WordPress."
 
-#: admin/general-settings.php:61
-msgid "Completely disable automatic updates on your website."
-msgstr ""
-"Désactivez complètement les mises à jour automatiques sur votre site web."
-
-#: admin/general-settings.php:63
+#: admin/general-settings.php:67
 msgid ""
 "Hide the Attachment/Attachments pages on the frontend from all visitors."
 msgstr ""
 "Cacher les pages de pièces jointes sur le frontend à tous les visiteurs."
 
-#: admin/general-settings.php:65
+#: admin/general-settings.php:69
 msgid "Disable comments for all post types, in the admin and the frontend."
 msgstr ""
 "Désactiver les commentaires pour tous les types d'articles, dans "
 "l'administration et le frontend."
 
-#: admin/general-settings.php:74 admin/performance-settings.php:53
-#: admin/security-settings.php:60 admin/wordpress-admin-settings.php:67
+#: admin/general-settings.php:78 admin/performance-settings.php:64
+#: admin/security-settings.php:71 admin/wordpress-admin-settings.php:78
 msgid "Save Changes"
 msgstr "Enregistrer les modifications"
 
-#: admin/performance-settings.php:22
+#: admin/performance-settings.php:30
 msgid "Performance Settings"
 msgstr "Paramètres de performance"
 
-#: admin/performance-settings.php:28
+#: admin/performance-settings.php:39
 msgid "Allow SVG Files Upload"
 msgstr "Autoriser le téléchargement de fichiers SVG"
 
-#: admin/performance-settings.php:44
+#: admin/performance-settings.php:55
 msgid "Add support for SVG files to be uploaded in WordPress media."
 msgstr ""
 "Ajout d'un support pour les fichiers SVG à télécharger dans les médias de "
 "WordPress."
 
-#: admin/security-settings.php:26
+#: admin/security-settings.php:34
 msgid "Security Settings"
 msgstr "Paramètres de sécurité"
 
-#: admin/security-settings.php:32
+#: admin/security-settings.php:43
 msgid "Disable XML-RPC"
 msgstr "Désactiver XML-RPC"
 
-#: admin/security-settings.php:33
+#: admin/security-settings.php:44
 msgid "Disable WordPress REST API"
 msgstr "Désactiver l'API REST de WordPress"
 
-#: admin/security-settings.php:49
+#: admin/security-settings.php:60
 msgid "On sites running WordPress 3.5+, disable XML-RPC completely."
 msgstr ""
 "Sur les sites utilisant WordPress 3.5+, désactivez complètement XML-RPC."
 
-#: admin/security-settings.php:51
+#: admin/security-settings.php:62
 msgid "Easily disable the WP REST API on your website."
 msgstr "Désactivez facilement l'API REST de WP sur votre site web."
 
-#: admin/wordpress-admin-settings.php:30
+#: admin/wordpress-admin-settings.php:38
 msgid "WordPress Admin Settings"
 msgstr "Paramètres d'administration de WordPress"
 
-#: admin/wordpress-admin-settings.php:36
+#: admin/wordpress-admin-settings.php:47
 msgid "Remove WordPress Version Number"
 msgstr "Supprimer le numéro de version de WordPress"
 
-#: admin/wordpress-admin-settings.php:37
+#: admin/wordpress-admin-settings.php:48
 msgid "Disable Gutenberg Editor (use Classic Editor)"
 msgstr "Désactiver l'éditeur Gutenberg (utiliser l'éditeur classique)"
 
-#: admin/wordpress-admin-settings.php:38
+#: admin/wordpress-admin-settings.php:49
 msgid "Disable The WP Admin Bar"
 msgstr "Désactiver la barre d'administration de WP"
 
-#: admin/wordpress-admin-settings.php:54
+#: admin/wordpress-admin-settings.php:65
 msgid "Hide the WordPress version number from your site's frontend and feeds."
 msgstr ""
 "Cachez le numéro de version de WordPress dans le frontend et les flux de "
 "votre site."
 
-#: admin/wordpress-admin-settings.php:56
+#: admin/wordpress-admin-settings.php:67
 msgid "Switch back to the Classic Editor by disablling the Block Editor."
 msgstr "Revenez à l'éditeur classique en désactivant l'éditeur de blocs."
 
-#: admin/wordpress-admin-settings.php:58
+#: admin/wordpress-admin-settings.php:69
 msgid "Hide the WordPress Admin Bar for all users in the frontend."
 msgstr ""
 "Cacher la barre d'administration de WordPress pour tous les utilisateurs "
 "dans le frontend."
 
-#: flexipress.php:26
+#: flexipress.php:28
 msgid ""
 "FlexiPress requires at least WordPress 5.0. Please update your installation."
 msgstr ""
 "FlexiPress nécessite au moins WordPress 5.0. Veuillez mettre à jour votre "
 "installation."
+
+#: includes/disable-wordpress-rest-api/disable-wordpress-rest-api.php:8
+msgid "The WordPress REST API has been disabled."
+msgstr "L'API REST de WordPress a été désactivée."
+
+#~ msgid "Disable Automatic Updates"
+#~ msgstr "Désactiver les mises à jour automatiques"
+
+#~ msgid "Completely disable automatic updates on your website."
+#~ msgstr ""
+#~ "Désactivez complètement les mises à jour automatiques sur votre site web."

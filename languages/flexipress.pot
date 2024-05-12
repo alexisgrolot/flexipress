@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: FlexiPress 1.0.0\n"
+"Project-Id-Version: FlexiPress 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/flexipress\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-03-24T22:05:08+00:00\n"
+"POT-Creation-Date: 2024-05-12T12:40:15+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: flexipress\n"
@@ -17,7 +17,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: C:\Users\MATI.HERVE\Downloads\flexipress\flexipress.php
 #: admin/admin.php:6
-#: flexipress.php:45
+#: flexipress.php:47
 msgid "FlexiPress"
 msgstr ""
 
@@ -43,7 +43,7 @@ msgstr ""
 
 #: admin/admin.php:6
 #: admin/admin.php:13
-#: flexipress.php:44
+#: flexipress.php:46
 msgid "FlexiPress Settings"
 msgstr ""
 
@@ -79,109 +79,105 @@ msgstr ""
 msgid "Tracking and Analytics"
 msgstr ""
 
-#: admin/general-settings.php:34
+#: admin/general-settings.php:38
 msgid "General Settings"
 msgstr ""
 
-#: admin/general-settings.php:40
+#: admin/general-settings.php:47
 msgid "Disable Automatic Updates Emails"
 msgstr ""
 
-#: admin/general-settings.php:41
-msgid "Disable Automatic Updates"
-msgstr ""
-
-#: admin/general-settings.php:42
+#: admin/general-settings.php:48
 msgid "Disable Attachment Pages"
 msgstr ""
 
-#: admin/general-settings.php:43
+#: admin/general-settings.php:49
 msgid "Completely Disable Comments"
 msgstr ""
 
-#: admin/general-settings.php:59
+#: admin/general-settings.php:65
 msgid "Stop getting emails about automatic updates on your WordPress site."
 msgstr ""
 
-#: admin/general-settings.php:61
-msgid "Completely disable automatic updates on your website."
-msgstr ""
-
-#: admin/general-settings.php:63
+#: admin/general-settings.php:67
 msgid "Hide the Attachment/Attachments pages on the frontend from all visitors."
 msgstr ""
 
-#: admin/general-settings.php:65
+#: admin/general-settings.php:69
 msgid "Disable comments for all post types, in the admin and the frontend."
 msgstr ""
 
-#: admin/general-settings.php:74
-#: admin/performance-settings.php:53
-#: admin/security-settings.php:60
-#: admin/wordpress-admin-settings.php:67
+#: admin/general-settings.php:78
+#: admin/performance-settings.php:64
+#: admin/security-settings.php:71
+#: admin/wordpress-admin-settings.php:78
 msgid "Save Changes"
 msgstr ""
 
-#: admin/performance-settings.php:22
+#: admin/performance-settings.php:30
 msgid "Performance Settings"
 msgstr ""
 
-#: admin/performance-settings.php:28
+#: admin/performance-settings.php:39
 msgid "Allow SVG Files Upload"
 msgstr ""
 
-#: admin/performance-settings.php:44
+#: admin/performance-settings.php:55
 msgid "Add support for SVG files to be uploaded in WordPress media."
 msgstr ""
 
-#: admin/security-settings.php:26
+#: admin/security-settings.php:34
 msgid "Security Settings"
 msgstr ""
 
-#: admin/security-settings.php:32
+#: admin/security-settings.php:43
 msgid "Disable XML-RPC"
 msgstr ""
 
-#: admin/security-settings.php:33
+#: admin/security-settings.php:44
 msgid "Disable WordPress REST API"
 msgstr ""
 
-#: admin/security-settings.php:49
+#: admin/security-settings.php:60
 msgid "On sites running WordPress 3.5+, disable XML-RPC completely."
 msgstr ""
 
-#: admin/security-settings.php:51
+#: admin/security-settings.php:62
 msgid "Easily disable the WP REST API on your website."
 msgstr ""
 
-#: admin/wordpress-admin-settings.php:30
+#: admin/wordpress-admin-settings.php:38
 msgid "WordPress Admin Settings"
 msgstr ""
 
-#: admin/wordpress-admin-settings.php:36
+#: admin/wordpress-admin-settings.php:47
 msgid "Remove WordPress Version Number"
 msgstr ""
 
-#: admin/wordpress-admin-settings.php:37
+#: admin/wordpress-admin-settings.php:48
 msgid "Disable Gutenberg Editor (use Classic Editor)"
 msgstr ""
 
-#: admin/wordpress-admin-settings.php:38
+#: admin/wordpress-admin-settings.php:49
 msgid "Disable The WP Admin Bar"
 msgstr ""
 
-#: admin/wordpress-admin-settings.php:54
+#: admin/wordpress-admin-settings.php:65
 msgid "Hide the WordPress version number from your site's frontend and feeds."
 msgstr ""
 
-#: admin/wordpress-admin-settings.php:56
+#: admin/wordpress-admin-settings.php:67
 msgid "Switch back to the Classic Editor by disablling the Block Editor."
 msgstr ""
 
-#: admin/wordpress-admin-settings.php:58
+#: admin/wordpress-admin-settings.php:69
 msgid "Hide the WordPress Admin Bar for all users in the frontend."
 msgstr ""
 
-#: flexipress.php:26
+#: flexipress.php:28
 msgid "FlexiPress requires at least WordPress 5.0. Please update your installation."
+msgstr ""
+
+#: includes/disable-wordpress-rest-api/disable-wordpress-rest-api.php:8
+msgid "The WordPress REST API has been disabled."
 msgstr ""

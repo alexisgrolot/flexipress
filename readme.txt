@@ -3,8 +3,8 @@ Contributors: alexisgrolot
 Donate link: https://express-wp.com/
 Tags: tools, tweaks, Admin Tools
 Requires at least: 5.0
-Tested up to: 6.5
-Stable tag: 1.0.0
+Tested up to: 6.5.3
+Stable tag: 1.0.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -21,7 +21,7 @@ FlexiPress is much more than just a WordPress plugin; it's a versatile solution 
 
 1. **Performance Optimization:** FlexiPress offers a series of performance optimizations to ensure that your WordPress site runs smoothly and quickly, whatever the volume of traffic.
 
-2. **Enhanced Security:** Protect your site against online threats with advanced security features such as disabling automatic updates, attachment management, and much more.
+2. **Enhanced Security:** Protect your site against online threats with advanced security features such as disabling XML-RPC, WordPress REST API, and much more.
 
 3. **Easy customization:** With FlexiPress, you can easily customize your WordPress site to meet your specific needs. Whether you want to change the default settings or add new features, FlexiPress gives you total flexibility.
 
@@ -60,10 +60,21 @@ FlexiPress streamlines management by bringing together a wide range of functions
 
 == Changelog ==
 
+= 1.0.1 =
+* Feature: Disable Automatic Updates - Removed feature because it alters WP's update functionality
+* Fix: Internationalization - Forgotten a translation domain
+* Security Fix: Escaped variables and options when echo'd
+* Improvement: Core - Use of unique function/class/definition/namespace/option names
+* Security Fix: Prevents direct access to plugin files
+* Security Fix: Added Nonces and User Permissions
+
 = 1.0 =
 * Initial Version
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+We have removed a feature and optimized the internal structure of FlexiPress in this update. To ensure the security of your website, we recommend that you make a backup of your website before updating.
 
 = 1.0 =
 Initial Version
