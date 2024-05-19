@@ -4,7 +4,7 @@ Donate link: https://express-wp.com/
 Tags: tools, tweaks, Admin Tools
 Requires at least: 5.0
 Tested up to: 6.5.3
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -59,6 +59,9 @@ FlexiPress streamlines management by bringing together a wide range of functions
 2. This screenshot shows some of FlexiPress' most popular features in action, such as the customization tools. This gives a concrete idea of what the plugin can do for you.
 
 == Changelog ==
+
+= 1.0.2 =
+* Security Fix: Sanitized, Escaped, and Validated data
 
 = 1.0.1 =
 * Feature: Disable Automatic Updates - Removed feature because it alters WP's update functionality
