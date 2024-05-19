@@ -13,7 +13,7 @@ $disablewordpressrestapi_enabled = get_option('flexipresssecurity_enabled_disabl
 // Form processing during submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
     // Verify nonce
-    if ( !isset( $_POST['flexipress_settings_nonce'] ) || !wp_verify_nonce( $_POST['flexipress_settings_nonce'], 'flexipress_save_settings' ) ) {
+    if ( !isset( $_POST['flexipress_settings_nonce'] ) || !wp_verify_nonce( sanitize_text_field( wp_unslash ( $_POST['flexipress_settings_nonce'] ) ) , 'flexipress_save_settings' ) ) {
         // Nonce verification failed; do something like display an error message or redirect
         // For example: wp_die( 'Security check failed' );
     } else {
