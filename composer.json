@@ -1,0 +1,21 @@
+{
+    "name": "wpexpress/flexipress",
+    "description": "FlexiPress is the ultimate WordPress plugin, combining performance, security and customization in one simple, elegant solution. Everything you need.",
+    "type": "project",
+    "require": {
+        "enshrined/svg-sanitize": "^0.18.0"
+    },
+    "license": "GPLv2 or later",
+    "autoload": {
+        "psr-4": {
+            "Wpexpress\\Flexipress\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexis Grolot",
+            "email": "alexis.wpexpress@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

@@ -85,6 +85,8 @@ require_once(plugin_dir_path(__FILE__) . 'includes/wordpress-admin.php');
 require_once(plugin_dir_path(__FILE__) . 'includes/javascript.php');
 require_once(plugin_dir_path(__FILE__) . 'includes/tracking-analytics.php');
 
+require_once 'vendor/autoload.php';
+
 // Saves CSS styles
 function flexipress_enqueue_styles() {
     wp_enqueue_style('flexipress-styles', plugins_url('css/flexipress-styles.css', __FILE__));
