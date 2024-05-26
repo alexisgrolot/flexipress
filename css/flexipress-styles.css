@@ -102,7 +102,7 @@
 
 /* Adjust space between title and description */
 .feature-details p {
-  margin-top: -20px; /* Adjust margins to reduce space */
+  margin-top: -15px; /* Adjust margins to reduce space */
 }
 
 /* "Save Changes" button style */
@@ -119,4 +119,15 @@ transition: background-color 0.3s ease;
 
 button[name="save_changes"]:hover {
 background-color: #0087C1;
+}
+
+/* Add style for non-recommended badge */
+.not-recommended-badge {
+    background-color: #ff4d4d; /* Red background color */
+    color: #ffffff; /* White text */
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin-left: 10px; /* Spacing of badge from text */
+    vertical-align: middle; /* Vertical alignment with text */
 }

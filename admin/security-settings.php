@@ -47,6 +47,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
 
         foreach ($features as $key => $label) :
             $enabled = get_option("flexipress_security_enabled_$key", false);
+			$is_not_recommended = false; // By default, the feature is not marked as non-recommended
+			
+			// Check whether the feature is non-recommended and set $is_not_recommended accordingly.
+			if ($key === 'disablewordpressrestapi') {
+			$is_not_recommended = true;
+			}
         ?>
             <div class="feature-toggle-pair">
                 <label class="switch">
@@ -55,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
                 </label>
                 
                 <div class="feature-details">
-                    <h3><?php echo esc_html( $label ); ?></h3>
+                    <h3><?php echo esc_html( $label ); ?><?php if ($is_not_recommended): ?><span class="not-recommended-badge"><?php esc_html_e( 'Not recommended', 'flexipress' ); ?></span><?php endif; ?></h3>
                     <?php if ($key === 'disablexmlrpc'): ?>
                         <p><?php esc_html_e('On sites running WordPress 3.5+, disable XML-RPC completely.', 'flexipress'); ?></p> <!-- Function description -->
                     <?php elseif ($key === 'disablewordpressrestapi'): ?>
