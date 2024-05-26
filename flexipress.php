@@ -89,6 +89,8 @@ require_once 'vendor/autoload.php';
 
 // Saves CSS styles
 function flexipress_enqueue_styles() {
-    wp_enqueue_style('flexipress-styles', plugins_url('css/flexipress-styles.css', __FILE__));
+	$css_file = plugin_dir_path(__FILE__) . 'css/flexipress-styles.css';
+    $version = file_exists($css_file) ? filemtime($css_file) : '1.1.0';
+    wp_enqueue_style('flexipress-styles', plugins_url('css/flexipress-styles.css', __FILE__), array(), $version);
 }
 add_action('admin_enqueue_scripts', 'flexipress_enqueue_styles');
