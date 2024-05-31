@@ -6,11 +6,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 require_once(plugin_dir_path(__FILE__) . '/../includes/remove-wordpress-version-number/remove-wordpress-version-number.php');
 require_once(plugin_dir_path(__FILE__) . '/../includes/disable-gutenberg-editor/disable-gutenberg-editor.php');
 require_once(plugin_dir_path(__FILE__) . '/../includes/disable-the-wp-admin-bar/disable-the-wp-admin-bar.php');
+require_once(plugin_dir_path(__FILE__) . '/../includes/front-end-comment-moderation/front-end-comment-moderation.php');
 
 // Checks if features are enabled
 $removewordpressversionnumber_enabled = get_option('flexipress_wordpress-admin_enabled_removewordpressversionnumber', false);
 $disablegutenbergeditor_enabled = get_option('flexipress_wordpress-admin_enabled_disablegutenbergeditor', false);
 $disablethewpadminbar_enabled = get_option('flexipress_wordpress-admin_enabled_disablethewpadminbar', false);
+$frontendcommentmoderation_enabled = get_option('flexipress_wordpress-admin_enabled_frontendcommentmoderation', false);
 
 // Form processing during submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
@@ -23,11 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
 		$removewordpressversionnumber_enabled = isset($_POST['removewordpressversionnumber_enabled']) && $_POST['removewordpressversionnumber_enabled'] === 'on';
 		$disablegutenbergeditor_enabled = isset($_POST['disablegutenbergeditor_enabled']) && $_POST['disablegutenbergeditor_enabled'] === 'on';
 		$disablethewpadminbar_enabled = isset($_POST['disablethewpadminbar_enabled']) && $_POST['disablethewpadminbar_enabled'] === 'on';
+		$frontendcommentmoderation_enabled = isset($_POST['frontendcommentmoderation_enabled']) && $_POST['frontendcommentmoderation_enabled'] === 'on';
 
         // Records toggle switch status
 		update_option('flexipress_wordpress-admin_enabled_removewordpressversionnumber', $removewordpressversionnumber_enabled);
 		update_option('flexipress_wordpress-admin_enabled_disablegutenbergeditor', $disablegutenbergeditor_enabled);
 		update_option('flexipress_wordpress-admin_enabled_disablethewpadminbar', $disablethewpadminbar_enabled);
+		update_option('flexipress_wordpress-admin_enabled_frontendcommentmoderation', $frontendcommentmoderation_enabled);
     }
 }
 
@@ -47,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
             'removewordpressversionnumber' => __('Remove WordPress Version Number', 'flexipress'),
             'disablegutenbergeditor' => __('Disable Gutenberg Editor (use Classic Editor)', 'flexipress'),
             'disablethewpadminbar' => __('Disable The WP Admin Bar', 'flexipress'),
+			'frontendcommentmoderation' => __('Front-End Comment Moderation', 'flexipress'),
             // Add other features as needed
         );
 
@@ -73,6 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
                         <p><?php esc_html_e('Switch back to the Classic Editor by disablling the Block Editor.', 'flexipress'); ?></p> <!-- Function description -->
                     <?php elseif ($key === 'disablethewpadminbar'): ?>
                         <p><?php esc_html_e('Hide the WordPress Admin Bar for all users in the frontend.', 'flexipress'); ?></p> <!-- Function description -->
+					<?php elseif ($key === 'frontendcommentmoderation'): ?>
+                        <p><?php esc_html_e('Allows administrators to instantly delete comments from the front-end without reloading the page.', 'flexipress'); ?></p> <!-- Function description -->
                     <?php else: ?>
                         <p>.</p> <!-- Default description -->
                     <?php endif; ?>

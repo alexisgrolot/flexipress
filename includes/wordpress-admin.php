@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 require_once(plugin_dir_path(__FILE__) . 'remove-wordpress-version-number/remove-wordpress-version-number.php');
 require_once(plugin_dir_path(__FILE__) . 'disable-gutenberg-editor/disable-gutenberg-editor.php');
 require_once(plugin_dir_path(__FILE__) . 'disable-the-wp-admin-bar/disable-the-wp-admin-bar.php');
+require_once(plugin_dir_path(__FILE__) . 'front-end-comment-moderation/front-end-comment-moderation.php');
 
 // Checks if features are enabled
 if (get_option('flexipress_wordpress-admin_enabled_removewordpressversionnumber', false)) {
@@ -28,4 +29,11 @@ if (get_option('flexipress_wordpress-admin_enabled_disablethewpadminbar', false)
 } else {
     // Disables feature if not activated
     flexipress_wordpressadmin_disablethewpadminbar_deactivate();
+}
+if (get_option('flexipress_wordpress-admin_enabled_frontendcommentmoderation', false)) {
+    // Calls up the function to display the feature
+    flexipress_wordpressadmin_frontendcommentmoderation();
+} else {
+    // Disables feature if not activated
+    flexipress_wordpressadmin_frontendcommentmoderation_deactivate();
 }
