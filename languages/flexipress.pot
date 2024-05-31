@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-31T21:33:55+00:00\n"
+"POT-Creation-Date: 2024-05-31T22:00:11+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: flexipress\n"
@@ -195,4 +195,30 @@ msgstr ""
 
 #: includes/disable-wordpress-rest-api/disable-wordpress-rest-api.php:8
 msgid "The WordPress REST API has been disabled."
+msgstr ""
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:7
+msgid "Delete"
+msgstr ""
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:8
+msgid "Cancel"
+msgstr ""
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:21
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:40
+msgid "Invalid nonce"
+msgstr ""
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:26
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:45
+msgid "Permission denied or missing comment ID"
+msgstr ""
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:32
+msgid "Comment deleted"
+msgstr ""
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:51
+msgid "Comment restored"
 msgstr ""

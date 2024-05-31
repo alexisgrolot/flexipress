@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FlexiPress 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/flexipress\n"
-"POT-Creation-Date: 2024-05-31T21:33:55+00:00\n"
-"PO-Revision-Date: 2024-05-31 23:37+0200\n"
+"POT-Creation-Date: 2024-05-31T22:00:11+00:00\n"
+"PO-Revision-Date: 2024-06-01 00:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: WP Express alexis.wpexpress@gmail.com\n"
 "Language: fr_FR\n"
@@ -217,6 +217,32 @@ msgstr ""
 #: includes/disable-wordpress-rest-api/disable-wordpress-rest-api.php:8
 msgid "The WordPress REST API has been disabled."
 msgstr "L'API REST de WordPress a été désactivée."
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:7
+msgid "Delete"
+msgstr "Supprimer"
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:8
+msgid "Cancel"
+msgstr "Annuler"
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:21
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:40
+msgid "Invalid nonce"
+msgstr "Nonce non valide"
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:26
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:45
+msgid "Permission denied or missing comment ID"
+msgstr "Permission refusée ou ID de commentaire manquant"
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:32
+msgid "Comment deleted"
+msgstr "Commentaire supprimé"
+
+#: includes/front-end-comment-moderation/front-end-comment-moderation.php:51
+msgid "Comment restored"
+msgstr "Commentaire restauré"
 
 #~ msgid "Disable Automatic Updates"
 #~ msgstr "Désactiver les mises à jour automatiques"
