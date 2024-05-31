@@ -4,8 +4,8 @@ function flexipress_wordpressadmin_frontendcommentmoderation() {
 	function flexipress_modify_comment_reply_link($link, $args, $comment, $post) {
 		if (!is_admin() && current_user_can('administrator')) {
 			// Buttons will have CSS classes for styles
-			$delete_icon = '<a href="#" class="flexipress-delete-comment" data-comment-id="' . $comment->comment_ID . '" style="color: red;"> 🗑️ Supprimer</a>';
-			$undo_icon = '<a href="#" class="flexipress-undo-delete" data-comment-id="' . $comment->comment_ID . '" style="display:none; color: green;"> ↩️ Annuler</a>';
+			$delete_icon = '<a href="#" class="flexipress-delete-comment" data-comment-id="' . $comment->comment_ID . '" style="color: red;"> 🗑️ ' . __('Delete', 'flexipress') . '</a>';
+			$undo_icon = '<a href="#" class="flexipress-undo-delete" data-comment-id="' . $comment->comment_ID . '" style="display:none; color: green;"> ↩️ ' . __('Cancel', 'flexipress') . '</a>';
 
 			// Add delete and cancel icons after comment actions
 			$link .= ' ' . $delete_icon . ' ' . $undo_icon;
@@ -18,18 +18,18 @@ function flexipress_wordpressadmin_frontendcommentmoderation() {
 	function flexipress_ajax_delete_comment() {
 		// Verify nonce
         if (!isset($_POST['_ajax_nonce']) || !wp_verify_nonce($_POST['_ajax_nonce'], 'flexipress_ajax_nonce')) {
-            wp_send_json_error('Invalid nonce');
+            wp_send_json_error(__('Invalid nonce', 'flexipress'));
             return;
         }
 		
 		if (!isset($_POST['comment_id']) || !current_user_can('administrator')) {
-			wp_send_json_error('Permission denied or missing comment ID');
+			wp_send_json_error(__('Permission denied or missing comment ID', 'flexipress'));
 			return;
 		}
 
 		$comment_id = intval($_POST['comment_id']);
 		wp_trash_comment($comment_id);
-		wp_send_json_success('Comment deleted');
+		wp_send_json_success(__('Comment deleted', 'flexipress'));
 	}
 	add_action('wp_ajax_flexipress_delete_comment', 'flexipress_ajax_delete_comment');
 
@@ -37,18 +37,18 @@ function flexipress_wordpressadmin_frontendcommentmoderation() {
 	function flexipress_ajax_undo_delete_comment() {
 		// Verify nonce
         if (!isset($_POST['_ajax_nonce']) || !wp_verify_nonce($_POST['_ajax_nonce'], 'flexipress_ajax_nonce')) {
-            wp_send_json_error('Invalid nonce');
+            wp_send_json_error(__('Invalid nonce', 'flexipress'));
             return;
         }
 		
 		if (!isset($_POST['comment_id']) || !current_user_can('administrator')) {
-			wp_send_json_error('Permission denied or missing comment ID');
+			wp_send_json_error(__('Permission denied or missing comment ID', 'flexipress'));
 			return;
 		}
 
 		$comment_id = intval($_POST['comment_id']);
 		wp_untrash_comment($comment_id);
-		wp_send_json_success('Comment restored');
+		wp_send_json_success(__('Comment restored', 'flexipress'));
 	}
 	add_action('wp_ajax_flexipress_undo_delete_comment', 'flexipress_ajax_undo_delete_comment');
 	
