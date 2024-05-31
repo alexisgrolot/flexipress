@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FlexiPress 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/flexipress\n"
-"POT-Creation-Date: 2024-05-12T12:40:15+00:00\n"
-"PO-Revision-Date: 2024-05-12 14:43+0200\n"
+"POT-Creation-Date: 2024-05-31T21:33:55+00:00\n"
+"PO-Revision-Date: 2024-05-31 23:37+0200\n"
 "Last-Translator: \n"
 "Language-Team: WP Express alexis.wpexpress@gmail.com\n"
 "Language: fr_FR\n"
@@ -48,39 +48,39 @@ msgstr "Alexis GROLOT (WP Express)"
 msgid "https://express-wp.com/en/about"
 msgstr "https://express-wp.com/a-propos"
 
-#: admin/admin.php:6 admin/admin.php:13 flexipress.php:46
+#: admin/admin.php:6 admin/admin.php:22 flexipress.php:46
 msgid "FlexiPress Settings"
 msgstr "Paramètres de FlexiPress"
 
-#: admin/admin.php:22
+#: admin/admin.php:34
 msgid "General"
 msgstr "Général"
 
-#: admin/admin.php:23
+#: admin/admin.php:35
 msgid "Performance"
 msgstr "Performance"
 
-#: admin/admin.php:24
+#: admin/admin.php:36
 msgid "Styling"
 msgstr "Stylisme"
 
-#: admin/admin.php:25
+#: admin/admin.php:37
 msgid "Animation"
 msgstr "Animation"
 
-#: admin/admin.php:26
+#: admin/admin.php:38
 msgid "Security"
 msgstr "Sécurité"
 
-#: admin/admin.php:27
+#: admin/admin.php:39
 msgid "WordPress Admin"
 msgstr "Administration de WordPress"
 
-#: admin/admin.php:28
+#: admin/admin.php:40
 msgid "Javascript"
 msgstr "Javascript"
 
-#: admin/admin.php:29
+#: admin/admin.php:41
 msgid "Tracking and Analytics"
 msgstr "Suivi et analyse"
 
@@ -100,26 +100,31 @@ msgstr "Désactiver les pages de pièces jointes"
 msgid "Completely Disable Comments"
 msgstr "Désactiver complètement les commentaires"
 
-#: admin/general-settings.php:65
+#: admin/general-settings.php:69 admin/performance-settings.php:59
+#: admin/security-settings.php:64 admin/wordpress-admin-settings.php:74
+msgid "Not recommended"
+msgstr "Non recommandé"
+
+#: admin/general-settings.php:71
 msgid "Stop getting emails about automatic updates on your WordPress site."
 msgstr ""
 "Ne recevez plus d'e-mails concernant les mises à jour automatiques de votre "
 "site WordPress."
 
-#: admin/general-settings.php:67
+#: admin/general-settings.php:73
 msgid ""
 "Hide the Attachment/Attachments pages on the frontend from all visitors."
 msgstr ""
 "Cacher les pages de pièces jointes sur le frontend à tous les visiteurs."
 
-#: admin/general-settings.php:69
+#: admin/general-settings.php:75
 msgid "Disable comments for all post types, in the admin and the frontend."
 msgstr ""
 "Désactiver les commentaires pour tous les types d'articles, dans "
 "l'administration et le frontend."
 
-#: admin/general-settings.php:78 admin/performance-settings.php:64
-#: admin/security-settings.php:71 admin/wordpress-admin-settings.php:78
+#: admin/general-settings.php:84 admin/performance-settings.php:70
+#: admin/security-settings.php:77 admin/wordpress-admin-settings.php:91
 msgid "Save Changes"
 msgstr "Enregistrer les modifications"
 
@@ -131,7 +136,7 @@ msgstr "Paramètres de performance"
 msgid "Allow SVG Files Upload"
 msgstr "Autoriser le téléchargement de fichiers SVG"
 
-#: admin/performance-settings.php:55
+#: admin/performance-settings.php:61
 msgid "Add support for SVG files to be uploaded in WordPress media."
 msgstr ""
 "Ajout d'un support pour les fichiers SVG à télécharger dans les médias de "
@@ -149,46 +154,58 @@ msgstr "Désactiver XML-RPC"
 msgid "Disable WordPress REST API"
 msgstr "Désactiver l'API REST de WordPress"
 
-#: admin/security-settings.php:60
+#: admin/security-settings.php:66
 msgid "On sites running WordPress 3.5+, disable XML-RPC completely."
 msgstr ""
 "Sur les sites utilisant WordPress 3.5+, désactivez complètement XML-RPC."
 
-#: admin/security-settings.php:62
+#: admin/security-settings.php:68
 msgid "Easily disable the WP REST API on your website."
 msgstr "Désactivez facilement l'API REST de WP sur votre site web."
 
-#: admin/wordpress-admin-settings.php:38
+#: admin/wordpress-admin-settings.php:42
 msgid "WordPress Admin Settings"
 msgstr "Paramètres d'administration de WordPress"
 
-#: admin/wordpress-admin-settings.php:47
+#: admin/wordpress-admin-settings.php:51
 msgid "Remove WordPress Version Number"
 msgstr "Supprimer le numéro de version de WordPress"
 
-#: admin/wordpress-admin-settings.php:48
+#: admin/wordpress-admin-settings.php:52
 msgid "Disable Gutenberg Editor (use Classic Editor)"
 msgstr "Désactiver l'éditeur Gutenberg (utiliser l'éditeur classique)"
 
-#: admin/wordpress-admin-settings.php:49
+#: admin/wordpress-admin-settings.php:53
 msgid "Disable The WP Admin Bar"
 msgstr "Désactiver la barre d'administration de WP"
 
-#: admin/wordpress-admin-settings.php:65
+#: admin/wordpress-admin-settings.php:54
+msgid "Front-End Comment Moderation"
+msgstr "Modération des commentaires en amont"
+
+#: admin/wordpress-admin-settings.php:76
 msgid "Hide the WordPress version number from your site's frontend and feeds."
 msgstr ""
 "Cachez le numéro de version de WordPress dans le frontend et les flux de "
 "votre site."
 
-#: admin/wordpress-admin-settings.php:67
+#: admin/wordpress-admin-settings.php:78
 msgid "Switch back to the Classic Editor by disablling the Block Editor."
 msgstr "Revenez à l'éditeur classique en désactivant l'éditeur de blocs."
 
-#: admin/wordpress-admin-settings.php:69
+#: admin/wordpress-admin-settings.php:80
 msgid "Hide the WordPress Admin Bar for all users in the frontend."
 msgstr ""
 "Cacher la barre d'administration de WordPress pour tous les utilisateurs "
 "dans le frontend."
+
+#: admin/wordpress-admin-settings.php:82
+msgid ""
+"Allows administrators to instantly delete comments from the front-end "
+"without reloading the page."
+msgstr ""
+"Permet aux administrateurs de supprimer instantanément des commentaires "
+"depuis le front-end sans recharger la page."
 
 #: flexipress.php:28
 msgid ""
