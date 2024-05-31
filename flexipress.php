@@ -4,7 +4,7 @@
  * Plugin Name: FlexiPress
  * Plugin URI: https://express-wp.com/en/
  * Description: FlexiPress is the ultimate WordPress plugin, combining performance, security and customization in one simple, elegant solution. Everything you need.
- * Version: 1.0.2
+ * Version: 1.1.0
  * Author Name: Alexis GROLOT (alexis.wpexpress@gmail.com)
  * Author: Alexis GROLOT (WP Express)
  * Text Domain: flexipress

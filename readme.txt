@@ -4,7 +4,7 @@ Donate link: https://express-wp.com/
 Tags: tools, tweaks, Admin Tools
 Requires at least: 5.0
 Tested up to: 6.5.3
-Stable tag: 1.0.2
+Stable tag: 1.1.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -60,14 +60,21 @@ FlexiPress streamlines management by bringing together a wide range of functions
 
 == Changelog ==
 
+= 1.1.0 =
+* Feature: Front-End Comment Moderation - Added a new feature that allows administrators to instantly delete comments from the front-end without reloading the page
+* Improvement: Core - Added badge Not recommended for the following functions: Disable Automatic Updates Emails, Disable WordPress REST API, Remove WordPress Version Number, Disable The WP Admin Bar
+* Improvement: Performance - Set the resource version so that new versions of the style are always loaded despite browser caching
+* Fix: Allow SVG Files Upload - Sanitized SVG files with the enshrined/svg-sanitize library
+* Security Fix: Added nonce verification when processing form data
+
 = 1.0.2 =
 * Security Fix: Sanitized, Escaped, and Validated data
 
 = 1.0.1 =
 * Feature: Disable Automatic Updates - Removed feature because it alters WP's update functionality
+* Improvement: Core - Use of unique function/class/definition/namespace/option names
 * Fix: Internationalization - Forgotten a translation domain
 * Security Fix: Escaped variables and options when echo'd
-* Improvement: Core - Use of unique function/class/definition/namespace/option names
 * Security Fix: Prevents direct access to plugin files
 * Security Fix: Added Nonces and User Permissions
 
@@ -75,9 +82,6 @@ FlexiPress streamlines management by bringing together a wide range of functions
 * Initial Version
 
 == Upgrade Notice ==
-
-= 1.0.1 =
-We have removed a feature and optimized the internal structure of FlexiPress in this update. To ensure the security of your website, we recommend that you make a backup of your website before updating.
 
 = 1.0 =
 Initial Version
