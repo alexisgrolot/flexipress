@@ -37,14 +37,31 @@ function flexipress_performance_allowsvgfilesupload() {
 
 function flexipress_sanitize_svg($file) {
     if ($file['type'] === 'image/svg+xml') {
+		// Initialize the WP_Filesystem object
+		global $wp_filesystem;
+		if (empty($wp_filesystem)) {
+            require_once(ABSPATH . 'wp-admin/includes/file.php');
+            WP_Filesystem();
+        }
+		
+		// Read the contents of the SVG file
+        $file_contents = $wp_filesystem->get_contents($file['tmp_name']);
+        if ($file_contents === false) {
+            $file['error'] = 'Failed to read SVG file';
+            return $file;
+        }
+		
+		// Sanitize the SVG
         $sanitizer = new Sanitizer();
-        $dirtySVG = file_get_contents($file['tmp_name']);
-        $cleanSVG = $sanitizer->sanitize($dirtySVG);
+        $cleanSVG = $sanitizer->sanitize($file_contents);
 
         if ($cleanSVG === false) {
             $file['error'] = 'Failed to sanitize SVG file';
         } else {
-            file_put_contents($file['tmp_name'], $cleanSVG);
+			// Write the sanitized contents back to the file
+            if (!$wp_filesystem->put_contents($file['tmp_name'], $cleanSVG, FS_CHMOD_FILE)) {
+                $file['error'] = 'Failed to write sanitized SVG file';
+            }
         }
     }
 
