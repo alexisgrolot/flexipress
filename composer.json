@@ -3,7 +3,7 @@
     "description": "FlexiPress is the ultimate WordPress plugin, combining performance, security and customization in one simple, elegant solution. Everything you need.",
     "type": "project",
     "require": {
-        "enshrined/svg-sanitize": "^0.18.0"
+        "enshrined/svg-sanitize": "^0.19.0"
     },
     "license": "GPLv2 or later",
     "autoload": {

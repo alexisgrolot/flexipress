@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'enshrined/svg-sanitize' => array(
-            'pretty_version' => '0.18.0',
-            'version' => '0.18.0.0',
-            'reference' => '6a2c069dab3843ca4d887ff09c972fc7033888d0',
+            'pretty_version' => '0.19.0',
+            'version' => '0.19.0.0',
+            'reference' => 'e95cd17be68e45f523cbfb0fe50cdd891b0cf20e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../enshrined/svg-sanitize',
             'aliases' => array(),
