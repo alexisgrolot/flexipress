@@ -1,4 +1,4 @@
-/* styles.css */
+/* File: css/flexipress-styles.css */
 
 /* General style */
 #flexipress-plugin .wrap {
@@ -130,4 +130,20 @@ background-color: #0087C1;
     border-radius: 3px;
     margin-left: 10px; /* Spacing of badge from text */
     vertical-align: middle; /* Vertical alignment with text */
+}
+
+#flexipress-plugin .sponsor-button .button-primary {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 0px 20px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+	margin-left: 40px;
+}
+
+#flexipress-plugin .sponsor-button .button-primary:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
 }

@@ -39,7 +39,12 @@ function flexipress_admin_page() {
             <a href="<?php echo esc_url(flexipress_tab_url('wordpress-admin')); ?>" class="nav-tab <?php echo $active_tab === 'wordpress-admin' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('WordPress Admin', 'flexipress'); ?></a>
             <a href="<?php echo esc_url(flexipress_tab_url('javascript')); ?>" class="nav-tab <?php echo $active_tab === 'javascript' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Javascript', 'flexipress'); ?></a>
             <a href="<?php echo esc_url(flexipress_tab_url('tracking-analytics')); ?>" class="nav-tab <?php echo $active_tab === 'tracking-analytics' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Tracking and Analytics', 'flexipress'); ?></a>
-        </h2>
+
+        <!-- Sponsor button -->
+        <div class="sponsor-button">
+            <a href="https://www.paypal.com/donate?hosted_button_id=265GHTXFX8F58" target="_blank" class="button-primary"><?php esc_html_e('Sponsor', 'flexipress'); ?></a>
+        </div>
+		</h2>
 
         <div class="tab-content">
             <?php
